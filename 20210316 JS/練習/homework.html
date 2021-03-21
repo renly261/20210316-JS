@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let weather=[
+            [18.2,17.3,15.0,13.4],
+            [23.8,25.1,20.6,17.8],
+            [20.6,21.5,18.4,15.7]
+        ]
+        
+        
+       
+        document.write("<table border=1>")     
+        for(let i=0;i<weather.length;i++){
+            document.write("<tr>")
+           for(let j=0;j<weather[i].length;j++){
+            document.write(`<td>${weather[i][j]}</td>`)
+       
+           }  
+           document.write("</tr>")
+        }
+        document.write("</table>")
+    </script>
+</body>
+</html>
