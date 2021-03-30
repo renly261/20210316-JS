@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 陣列包JSON
+
+        let people = [
+            { name: '一號同學', number: 1 },
+            { name: '二號同學', number: 2 }
+        ]
+        for (let i = 0; i < people.length; i++) {
+            console.log(people[i].name);
+        }
+
+        // JSON包陣列
+        let restaurant = {
+            name: '好吃便當店',
+            tel: '02-12345678',
+            foods: ['雞排飯', '排骨飯']
+        }
+        for (let i = 0; i < restaurant.foods.length; i++) {
+            console.log(restaurant.foods[i]);
+        }
+
+        let restaurant2 = {
+            name: '好吃便當店',
+            tel: '02-12345678',
+            foods: [
+                { name: '雞排飯', price: 90 },
+                { name: '排骨飯', price: 70 }
+            ]
+        }
+        for (let i = 0; i < restaurant2.foods.length; i++) {
+            let food = restaurant2.foods[i]
+            console.log(`${food.name}的價格為${food.price}`);
+        }
+
+    </script>
+</body>
+
+</html>

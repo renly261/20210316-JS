@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 外層中括號是銷售員
+        // 外層是銷售員的每個產品
+        let sell = [
+            [33, 32, 56, 45, 33],
+            [77, 33, 68, 45, 23],
+            [43, 55, 43, 67, 65]
+        ]
+
+        // i:銷售員 外層跑直的
+        // j:產品 內層跑橫的
+        for (let i = 0; i < sell.length; i++) {
+            for (let j = 0; j < sell[i].length; j++)
+                console.log(`銷售員${i}的產品${j}的銷售量為${sell[i][j]}`);
+        }
+    </script>
+</body>
+
+</html>

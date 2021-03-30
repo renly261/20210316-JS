@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let year = parseInt(prompt('年'))
+        let month = parseInt(prompt('日'))
+        let date = parseInt(prompt('日'))
+        // 天數總和
+        let sum = 0
+
+        // 迴圈每個月，將天數加總，(month - 1例如3月16日只要計算(3-1)個月+16)
+        for (let i = 1; i <= (month - 1); i++) {
+            // 二月先算28天
+            if (i == 2) {
+                sum += 28
+            }
+            // 七月以下的奇數月和八月以上的偶數月是31天
+            else if ((i <= 7 && i % 2 == 1) ||
+                (i >= 8 && i % 2 == 0)) {
+                sum += 31
+            }
+            else {
+                sum += 30
+            }
+        }
+        // 閏年
+        // 年份為4的倍數但非100的倍數，為閏年
+        // 年分為400的倍數
+        if (
+            month >= 3 && (
+                (year % 4 == 0 && year % 100 > 0) ||
+                (year % 400 == 0)
+            )
+        ) {
+            sum++
+        }
+        sum += date
+        document.write(sum)
+
+    </script>
+</body>
+
+</html>
